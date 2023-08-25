@@ -6,6 +6,9 @@ com\mycompany\jparelaciones\logica\Carrera.class
 com\mycompany\jparelaciones\persistence\ControladoraPersistencia.class
 com\mycompany\jparelaciones\persistence\exceptions\IllegalOrphanException.class
 com\mycompany\jparelaciones\persistence\exceptions\PreexistingEntityException.class
+com\mycompany\jparelaciones\logica\Materia.class
+com\mycompany\jparelaciones\logica\Materia_.class
+com\mycompany\jparelaciones\persistence\MateriaJpaController.class
 com\mycompany\jparelaciones\JpaRelaciones.class
 com\mycompany\jparelaciones\logica\Alumno.class
 com\mycompany\jparelaciones\logica\Alumno_.class

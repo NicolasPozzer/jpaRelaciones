@@ -5,6 +5,7 @@ package com.mycompany.jparelaciones.persistence;
 
 import com.mycompany.jparelaciones.logica.Alumno;
 import com.mycompany.jparelaciones.logica.Carrera;
+import com.mycompany.jparelaciones.logica.Materia;
 import com.mycompany.jparelaciones.persistence.exceptions.NonexistentEntityException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +19,7 @@ public class ControladoraPersistencia {
     //Declaramos Todas las unidades de persistencia que tenemos
     AlumnoJpaController aluJpa = new AlumnoJpaController();
     CarreraJpaController carreJpa = new CarreraJpaController();
-    
+    MateriaJpaController mateJpa = new MateriaJpaController();
     
     
     /*===INDICAMOS LO QUE VA A HACER CADA METODO===*/
@@ -95,6 +96,43 @@ public class ControladoraPersistencia {
         
         return listaCarreras;
     }
+
+    public void crearMateria(Materia mate) {
+        mateJpa.create(mate);
+    }
+
+    public void eliminarMateria(int id) {
+        try {
+            mateJpa.destroy(id);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void editarMateria(Materia mate) {
+        try {
+            mateJpa.edit(mate);
+        } catch (Exception ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public Materia traerMateria(int id) {
+        return mateJpa.findMateria(id);
+    }
+
+    public ArrayList<Materia> traerListaMaterias() {
+        //findEntities para traer la lista completa!
+        
+        //crear lista para recibir los arraylist
+        List<Materia> materiaa = mateJpa.findMateriaEntities();
+        ArrayList<Materia> listaMaterias = new ArrayList<Materia>(materiaa);
+        
+        
+        return listaMaterias;
+    }
+
+    
 
     
 

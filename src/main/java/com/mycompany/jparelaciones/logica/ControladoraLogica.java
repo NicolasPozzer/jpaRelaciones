@@ -81,4 +81,35 @@ public class ControladoraLogica {
     }
     
     
+    /*METODOS IGUALES PARA MATERIA*/
+    
+    //Crear un metodo que se encargue de dar de alta una nueva
+    //Carrera para pasarlo luego a la persistencia
+    public void crearMateria(Materia mate){
+        controlPersis.crearMateria(mate);
+    }
+    
+    
+    //Creamos metodo de eliminacion de Carrera
+    public void eliminarMateria(int id){
+        controlPersis.eliminarMateria(id);
+    }
+    
+    //Metodo para editar Carrera
+    public void editarMateria(Materia mate){
+        controlPersis.editarMateria(mate);
+    }
+    
+    //Metodo para traer una Carrera en particular
+    public Materia traerMateria(int id){
+        //Tiene que retornar valor una vez encuentra la Carrera
+        return controlPersis.traerMateria(id);
+    }
+    
+    //Metodo de Lista para traer todas los Carreras
+    public ArrayList<Materia> traerListaMaterias(){
+        return controlPersis.traerListaMaterias();
+    }
+    
+    
 }

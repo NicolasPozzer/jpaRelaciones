@@ -3,7 +3,9 @@ C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaci
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\persistence\CarreraJpaController.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\JpaRelaciones.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\logica\Carrera.java
+C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\logica\Materia.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\persistence\exceptions\NonexistentEntityException.java
+C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\persistence\MateriaJpaController.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\persistence\AlumnoJpaController.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\logica\Alumno.java
 C:\Users\nico-\Desktop\YoProgramo\Aprendiendo JAVA\2_OrientadaAObjetos\jpaRelaciones\src\main\java\com\mycompany\jparelaciones\persistence\ControladoraPersistencia.java

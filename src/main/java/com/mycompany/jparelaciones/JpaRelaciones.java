@@ -4,39 +4,77 @@ package com.mycompany.jparelaciones;
 import com.mycompany.jparelaciones.logica.Alumno;
 import com.mycompany.jparelaciones.logica.Carrera;
 import com.mycompany.jparelaciones.logica.ControladoraLogica;
+import com.mycompany.jparelaciones.logica.Materia;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 
 public class JpaRelaciones {
 
     public static void main(String[] args) {
-        
-        //Llamamos a la controladoraLogica que va a llamar a
-        //la de Persistencia de capa en capa
         ControladoraLogica control = new ControladoraLogica();
         
-        /*===DECLARACION PARA CREAR CARRERA===*/
-        Carrera carre = new Carrera(27, "Futbolista");
+        /*===PASOS===*/
+        
+        //Creamos lista de materias y las agregamos
+        LinkedList<Materia> listaMaterias = new LinkedList<Materia>();
+        //Creacion Carrera con lista de Materias
+        Carrera carre = new Carrera(24, "Lic. Sistemas", listaMaterias);//De esta manera asignamos materia a una carrera, Ej. poniendo la lista de materias en una carrera.
+        //Guardado Carrera en db
+        //Primero guarmamos creamos y guardamos la materia ya que las materias
+        //necesita primero una carrera para que no salte NULL.
         control.crearCarrera(carre);
+        
+        //Creacion Materias
+        Materia mate1 = new Materia(58, "Lengua", "Cuatrimestral", carre);
+        Materia mate2 = new Materia(33, "Programacion 1", "Bimestral", carre);
+        Materia mate3 = new Materia(47, "Ingles", "Anual", carre);
+        
+        //GuardadoMaterias en db
+        control.crearMateria(mate1);
+        control.crearMateria(mate2);
+        control.crearMateria(mate3);
+        
+        //Agregar a la lista las materias
+        listaMaterias.add(mate1);
+        listaMaterias.add(mate2);
+        listaMaterias.add(mate3);
+        //Agregamos la lista de materias a la carrera con un edit
+        carre.setListaMaterias(listaMaterias);
+        //Edita la lista en db
+        control.editarCarrera(carre);
+        
+        
+        //Creacion de Alumno (con Carrera)
+        Alumno alu = new Alumno(1, "Nicolas", "Pozzer", new Date(), carre);
+        //Guardamos el Alumno en la db
+        control.crearAlumno(alu);
+        
+        
+        
+        
+        
+        /*===DECLARACION PARA CREAR Carreara y asignar a Alumno===*/
+        //Llamamos a la controladoraLogica que va a llamar a
+        //la de Persistencia de capa en capa
+        
+        
+        /*===DECLARACION PARA CREAR CARRERA===*/
+        //Carrera carre = new Carrera(27, "Futbolista");
+        //control.crearCarrera(carre);
         /*===================================*/
         
         /*===ASOCIAR CARRERA A ALUMNO Y GUARDAR EN LA db===*/
-        Alumno al = new Alumno(5, "Robert", "Taylor", new Date(),carre);//asigno la carrera
-        control.crearAlumno(al);
+        //Alumno al = new Alumno(5, "Robert", "Taylor", new Date(),carre);//asigno la carrera
+        //control.crearAlumno(al);
         //Mostrar sus atributos
-        System.out.println("========Datos Alumno========");
-        Alumno alu = control.traerAlumno(5);
-        System.out.println("Alumno: "+alu.getNombre()+" "+alu.getApellido());
-        System.out.println("De la carrera: "+ alu.getCarre().getNombre());
+        //System.out.println("========Datos Alumno========");
+        //Alumno alu = control.traerAlumno(5);
+        //System.out.println("Alumno: "+alu.getNombre()+" "+alu.getApellido());
+        //System.out.println("De la carrera: "+ alu.getCarre().getNombre());
         /*===================================*/
         
-        
-        
-        
-        
-        
-        
-        
+
         
         
         /*===DECLARACION PARA CREAR ALUMNO===*/
