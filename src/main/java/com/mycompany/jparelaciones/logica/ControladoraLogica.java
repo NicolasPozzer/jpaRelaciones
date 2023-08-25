@@ -50,5 +50,35 @@ public class ControladoraLogica {
     }
     
     
+    /*METODOS IGUALES PARA CARRERA*/
+    
+    //Crear un metodo que se encargue de dar de alta una nueva
+    //Carrera para pasarlo luego a la persistencia
+    public void crearCarrera(Carrera carre){
+        controlPersis.crearCarrera(carre);
+    }
+    
+    
+    //Creamos metodo de eliminacion de Carrera
+    public void eliminarCarrera(int id){
+        controlPersis.eliminarCarrera(id);
+    }
+    
+    //Metodo para editar Carrera
+    public void editarCarrera(Carrera carre){
+        controlPersis.editarCarrera(carre);
+    }
+    
+    //Metodo para traer una Carrera en particular
+    public Carrera traerCarrera(int id){
+        //Tiene que retornar valor una vez encuentra la Carrera
+        return controlPersis.traerCarrera(id);
+    }
+    
+    //Metodo de Lista para traer todas los Carreras
+    public ArrayList<Carrera> traerListaCarreras(){
+        return controlPersis.traerListaCarreras();
+    }
+    
     
 }

@@ -2,6 +2,7 @@
 package com.mycompany.jparelaciones;
 
 import com.mycompany.jparelaciones.logica.Alumno;
+import com.mycompany.jparelaciones.logica.Carrera;
 import com.mycompany.jparelaciones.logica.ControladoraLogica;
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,11 +15,35 @@ public class JpaRelaciones {
         //la de Persistencia de capa en capa
         ControladoraLogica control = new ControladoraLogica();
         
+        /*===DECLARACION PARA CREAR CARRERA===*/
+        Carrera carre = new Carrera(27, "Futbolista");
+        control.crearCarrera(carre);
+        /*===================================*/
+        
+        /*===ASOCIAR CARRERA A ALUMNO Y GUARDAR EN LA db===*/
+        Alumno al = new Alumno(5, "Robert", "Taylor", new Date(),carre);//asigno la carrera
+        control.crearAlumno(al);
+        //Mostrar sus atributos
+        System.out.println("========Datos Alumno========");
+        Alumno alu = control.traerAlumno(5);
+        System.out.println("Alumno: "+alu.getNombre()+" "+alu.getApellido());
+        System.out.println("De la carrera: "+ alu.getCarre().getNombre());
+        /*===================================*/
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /*===DECLARACION PARA CREAR ALUMNO===*/
         /*Creamos un alumno que ira a la base de datos*/
-        Alumno alu = new Alumno(7, "Rei", "Thomas", new Date());//va a agregar la fecha de hoy
+        //Alumno alu = new Alumno(7, "Nick", "Jhones", new Date(),"Lic. Sistemas");//va a agregar la fecha de hoy
         /*llamamos al metodo para que cree el alumno*/
-        control.crearAlumno(alu);
+        //control.crearAlumno(alu);
         /*===================================*/
         
         

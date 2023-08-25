@@ -1,9 +1,12 @@
-com\mycompany\jparelaciones\persistence\exceptions\PreexistingEntityException.class
+com\mycompany\jparelaciones\logica\Carrera_.class
 com\mycompany\jparelaciones\persistence\exceptions\NonexistentEntityException.class
 com\mycompany\jparelaciones\logica\ControladoraLogica.class
 com\mycompany\jparelaciones\persistence\AlumnoJpaController.class
+com\mycompany\jparelaciones\logica\Carrera.class
+com\mycompany\jparelaciones\persistence\ControladoraPersistencia.class
+com\mycompany\jparelaciones\persistence\exceptions\IllegalOrphanException.class
+com\mycompany\jparelaciones\persistence\exceptions\PreexistingEntityException.class
 com\mycompany\jparelaciones\JpaRelaciones.class
 com\mycompany\jparelaciones\logica\Alumno.class
-com\mycompany\jparelaciones\persistence\ControladoraPersistencia.class
 com\mycompany\jparelaciones\logica\Alumno_.class
-com\mycompany\jparelaciones\persistence\exceptions\IllegalOrphanException.class
+com\mycompany\jparelaciones\persistence\CarreraJpaController.class
